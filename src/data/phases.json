@@ -1,0 +1,48 @@
+{
+  "USA": [
+    {
+      "id": "pre-election",
+      "label": "Pre-Election",
+      "icon": "📋",
+      "color": "#3B82F6",
+      "duration": "6–18 months before election day",
+      "summary": "Voter registration opens, candidates declare their intent, and primary elections are held to select party nominees.",
+      "steps": [
+        "Election date announced",
+        "Voter registration deadlines set",
+        "Candidate filing period opens",
+        "Primary elections held"
+      ]
+    },
+    {
+      "id": "campaign",
+      "label": "Campaign Phase",
+      "icon": "📢",
+      "color": "#F59E0B",
+      "duration": "Ongoing until election day",
+      "summary": "Candidates travel, hold rallies, debate, and use media to share their platforms and win voter support.",
+      "steps": [
+        "National conventions",
+        "General election debates",
+        "TV and social media advertising",
+        "Grassroots organizing"
+      ]
+    }
+  ],
+  "India": [
+    {
+      "id": "announcement",
+      "label": "Announcement & Code of Conduct",
+      "icon": "📜",
+      "color": "#10B981",
+      "duration": "6-8 weeks before voting",
+      "summary": "The Election Commission of India (ECI) announces the schedule, and the Model Code of Conduct comes into effect immediately.",
+      "steps": [
+        "Announcement of poll dates",
+        "Notification by the President/Governor",
+        "Enforcement of Model Code of Conduct",
+        "Deployment of security forces"
+      ]
+    }
+  ]
+}
