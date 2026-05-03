@@ -27,6 +27,48 @@
         "TV and social media advertising",
         "Grassroots organizing"
       ]
+    },
+    {
+      "id": "voting-day",
+      "label": "Voting Day",
+      "icon": "🗳️",
+      "color": "#10B981",
+      "duration": "First Tuesday after first Monday in November",
+      "summary": "Registered voters cast their ballots at polling stations or via mail-in/absentee ballots. Polls are open from early morning to evening.",
+      "steps": [
+        "Polling stations open (typically 6am–8pm)",
+        "Voters present ID where required",
+        "Ballots cast in person, by mail, or early voting",
+        "Exit polls conducted by media"
+      ]
+    },
+    {
+      "id": "counting",
+      "label": "Counting & Results",
+      "icon": "🔢",
+      "color": "#8B5CF6",
+      "duration": "Election night through several days/weeks",
+      "summary": "Votes are tallied by county election officials. Media projects winners based on returns; official results certified later.",
+      "steps": [
+        "In-person votes counted first",
+        "Mail-in and absentee ballots processed",
+        "Media projections announced",
+        "Provisional ballots reviewed"
+      ]
+    },
+    {
+      "id": "certification",
+      "label": "Certification",
+      "icon": "✅",
+      "color": "#EF4444",
+      "duration": "Weeks to months after election day",
+      "summary": "State officials certify results, electors cast Electoral College votes, and Congress counts and confirms the outcome.",
+      "steps": [
+        "State canvassing boards certify results",
+        "Governors sign certificates of ascertainment",
+        "Electoral College meets in December",
+        "Congress counts electoral votes in January"
+      ]
     }
   ],
   "India": [
@@ -35,13 +77,285 @@
       "label": "Announcement & Code of Conduct",
       "icon": "📜",
       "color": "#10B981",
-      "duration": "6-8 weeks before voting",
+      "duration": "6–8 weeks before voting",
       "summary": "The Election Commission of India (ECI) announces the schedule, and the Model Code of Conduct comes into effect immediately.",
       "steps": [
         "Announcement of poll dates",
         "Notification by the President/Governor",
         "Enforcement of Model Code of Conduct",
         "Deployment of security forces"
+      ]
+    },
+    {
+      "id": "nomination",
+      "label": "Nomination Phase",
+      "icon": "📝",
+      "color": "#3B82F6",
+      "duration": "4–5 weeks before voting",
+      "summary": "Candidates file nomination papers, which are scrutinized by Returning Officers. Candidates may withdraw before the deadline.",
+      "steps": [
+        "Nomination papers filed",
+        "Scrutiny of nominations by Returning Officer",
+        "Withdrawal of candidatures",
+        "Final list of candidates published"
+      ]
+    },
+    {
+      "id": "campaign-india",
+      "label": "Campaign Phase",
+      "icon": "📢",
+      "color": "#F59E0B",
+      "duration": "2–3 weeks before voting",
+      "summary": "Parties and candidates campaign across constituencies. The ECI enforces the Model Code of Conduct to ensure a level playing field.",
+      "steps": [
+        "Political rallies and public meetings",
+        "Door-to-door canvassing",
+        "Media advertising (regulated)",
+        "Campaign silence period 48 hours before polling"
+      ]
+    },
+    {
+      "id": "voting-india",
+      "label": "Polling Day",
+      "icon": "🗳️",
+      "color": "#10B981",
+      "duration": "Single or multiple phase polling days",
+      "summary": "Voters cast ballots using Electronic Voting Machines (EVMs). India often conducts elections in multiple phases across different states.",
+      "steps": [
+        "Polling stations open 7am–6pm",
+        "Voter ID verification",
+        "EVM-based voting with VVPAT",
+        "Ink mark applied to voter's finger"
+      ]
+    },
+    {
+      "id": "results-india",
+      "label": "Counting & Results",
+      "icon": "🔢",
+      "color": "#8B5CF6",
+      "duration": "Counting day (usually 1–2 weeks after last polling phase)",
+      "summary": "EVM votes are counted under strict supervision. The candidate with the most votes in each constituency wins (FPTP system).",
+      "steps": [
+        "Postal ballots counted first",
+        "EVM counting begins round by round",
+        "Returning Officer declares winner",
+        "Results notified to ECI"
+      ]
+    }
+  ],
+  "UK": [
+    {
+      "id": "dissolution",
+      "label": "Dissolution & Writ",
+      "icon": "📜",
+      "color": "#3B82F6",
+      "duration": "25 working days before polling",
+      "summary": "Parliament is dissolved and the Monarch issues writs of election to each constituency's Returning Officer, formally starting the election process.",
+      "steps": [
+        "Parliament dissolved by Royal Proclamation",
+        "Writs of election issued",
+        "Nomination period opens",
+        "Electoral registers confirmed"
+      ]
+    },
+    {
+      "id": "nomination-uk",
+      "label": "Candidate Nominations",
+      "icon": "📝",
+      "color": "#F59E0B",
+      "duration": "19 working days before polling",
+      "summary": "Candidates submit nomination papers with a £500 deposit (returned if they receive 5%+ of votes) and signatures from 10 registered voters.",
+      "steps": [
+        "Nomination papers submitted",
+        "£500 deposit paid",
+        "10 constituent signatures required",
+        "Final candidate list published"
+      ]
+    },
+    {
+      "id": "campaign-uk",
+      "label": "Campaign Phase",
+      "icon": "📢",
+      "color": "#10B981",
+      "duration": "~5 weeks",
+      "summary": "Parties campaign across 650 constituencies. Strict spending limits apply per constituency. The BBC and other broadcasters provide regulated coverage.",
+      "steps": [
+        "Party manifestos published",
+        "Leaders' debates broadcast",
+        "Constituency canvassing",
+        "Regulated media coverage"
+      ]
+    },
+    {
+      "id": "polling-uk",
+      "label": "Polling Day",
+      "icon": "🗳️",
+      "color": "#8B5CF6",
+      "duration": "Always a Thursday",
+      "summary": "Voters attend their designated polling station and mark an X next to their chosen candidate. Polls are open 7am–10pm.",
+      "steps": [
+        "Polling stations open 7am–10pm",
+        "Voters present poll card or ID",
+        "Paper ballot marked with X",
+        "Ballot boxes sealed and transported"
+      ]
+    },
+    {
+      "id": "count-uk",
+      "label": "Count & Declaration",
+      "icon": "✅",
+      "color": "#EF4444",
+      "duration": "Election night into early morning",
+      "summary": "Votes are counted at local counting centres. Returning Officers declare results constituency by constituency throughout the night.",
+      "steps": [
+        "Ballot boxes opened and verified",
+        "Votes sorted and counted",
+        "Returning Officer declares result",
+        "Party with most seats forms government"
+      ]
+    }
+  ],
+  "Germany": [
+    {
+      "id": "nomination-de",
+      "label": "Candidate & List Nomination",
+      "icon": "📝",
+      "color": "#3B82F6",
+      "duration": "~66 days before election",
+      "summary": "Parties submit both direct constituency candidates and state party lists. The dual ballot system means voters cast two votes: one for a local candidate, one for a party.",
+      "steps": [
+        "Parties hold internal selection meetings",
+        "Constituency candidates nominated",
+        "State party lists submitted to Federal Returning Officer",
+        "Candidate lists published"
+      ]
+    },
+    {
+      "id": "campaign-de",
+      "label": "Campaign Phase",
+      "icon": "📢",
+      "color": "#F59E0B",
+      "duration": "~6 weeks",
+      "summary": "Parties campaign on both constituency and national levels. Public broadcasting provides equal airtime. Campaign finance is regulated and publicly disclosed.",
+      "steps": [
+        "Party programmes published",
+        "TV debates (Triell/Elefantenrunde)",
+        "Poster campaigns in constituencies",
+        "Campaign finance reporting"
+      ]
+    },
+    {
+      "id": "voting-de",
+      "label": "Election Day",
+      "icon": "🗳️",
+      "color": "#10B981",
+      "duration": "Always a Sunday",
+      "summary": "Voters cast two ballots: Erststimme (first vote) for a direct constituency candidate, and Zweitstimme (second vote) for a party list. The second vote determines seat distribution.",
+      "steps": [
+        "Polling stations open 8am–6pm",
+        "Two ballots cast per voter",
+        "Erststimme: direct candidate",
+        "Zweitstimme: party list"
+      ]
+    },
+    {
+      "id": "counting-de",
+      "label": "Counting & Seat Allocation",
+      "icon": "🔢",
+      "color": "#8B5CF6",
+      "duration": "Election evening and following days",
+      "summary": "Votes are counted and seats allocated using the Sainte-Laguë method. Parties must clear a 5% threshold or win 3 direct seats to enter the Bundestag.",
+      "steps": [
+        "Constituency results declared",
+        "Party vote shares calculated",
+        "5% threshold applied",
+        "Seats allocated proportionally"
+      ]
+    },
+    {
+      "id": "coalition-de",
+      "label": "Coalition Formation",
+      "icon": "🤝",
+      "color": "#EF4444",
+      "duration": "Weeks to months after election",
+      "summary": "As no single party typically wins a majority, parties negotiate coalition agreements. The Federal President nominates a Chancellor candidate who must win a Bundestag majority.",
+      "steps": [
+        "Exploratory talks between parties",
+        "Coalition negotiations",
+        "Coalition agreement signed",
+        "Chancellor elected by Bundestag"
+      ]
+    }
+  ],
+  "Australia": [
+    {
+      "id": "dissolution-au",
+      "label": "Dissolution & Writs",
+      "icon": "📜",
+      "color": "#3B82F6",
+      "duration": "33 days minimum before polling",
+      "summary": "The Governor-General dissolves the House of Representatives on the Prime Minister's advice and issues writs for the election. Voting is compulsory for all enrolled citizens.",
+      "steps": [
+        "House dissolved by Governor-General",
+        "Writs issued to Electoral Commissioners",
+        "Rolls close for new enrolments",
+        "Nomination period opens"
+      ]
+    },
+    {
+      "id": "nomination-au",
+      "label": "Nominations",
+      "icon": "📝",
+      "color": "#F59E0B",
+      "duration": "~4 weeks before polling",
+      "summary": "Candidates pay a $2,000 deposit (refunded if they receive 4%+ of first preference votes) and submit nomination forms to the Australian Electoral Commission.",
+      "steps": [
+        "Nomination forms submitted to AEC",
+        "$2,000 deposit paid",
+        "Candidate eligibility verified",
+        "Ballot draw for position order"
+      ]
+    },
+    {
+      "id": "campaign-au",
+      "label": "Campaign Phase",
+      "icon": "📢",
+      "color": "#10B981",
+      "duration": "~5 weeks",
+      "summary": "Parties campaign nationally and in each electorate. The AEC runs a public information campaign about how to vote correctly, as informal (invalid) votes are a concern.",
+      "steps": [
+        "Party policies announced",
+        "Leaders' debates",
+        "How-to-vote cards distributed",
+        "Pre-poll voting opens"
+      ]
+    },
+    {
+      "id": "voting-au",
+      "label": "Election Day",
+      "icon": "🗳️",
+      "color": "#8B5CF6",
+      "duration": "Always a Saturday",
+      "summary": "Voting is compulsory. Voters number all candidates in order of preference (preferential voting). Failure to vote without a valid reason incurs a fine.",
+      "steps": [
+        "Polling stations open 8am–6pm",
+        "Name marked off electoral roll",
+        "Preferences numbered 1, 2, 3...",
+        "Sausage sizzle at many polling stations 🌭"
+      ]
+    },
+    {
+      "id": "counting-au",
+      "label": "Counting & Distribution",
+      "icon": "✅",
+      "color": "#EF4444",
+      "duration": "Election night and following days/weeks",
+      "summary": "First preference votes are counted first. If no candidate has a majority, preferences are distributed from the lowest-polling candidates until one candidate reaches 50%+1.",
+      "steps": [
+        "First preference votes tallied",
+        "Candidates with fewest votes eliminated",
+        "Preferences distributed sequentially",
+        "Candidate with majority declared elected"
       ]
     }
   ]

@@ -1,7 +1,6 @@
 {
   "pre-election": [
     {
-      "id": "q1",
       "question": "What is the primary purpose of the pre-election phase?",
       "options": [
         "To count votes",
@@ -10,7 +9,735 @@
         "To inaugurate the president"
       ],
       "correct": 2,
-      "explanation": "The pre-election phase focuses on setting the stage, including voter registration and nominating candidates."
+      "explanation": "The pre-election phase focuses on voter registration and nominating candidates."
+    },
+    {
+      "question": "What is a primary election?",
+      "options": [
+        "The final general election",
+        "A vote within a party to choose its candidate",
+        "A recount of disputed ballots",
+        "An election held only in primary schools"
+      ],
+      "correct": 1,
+      "explanation": "A primary election is held within a political party to select its nominee for the general election."
+    },
+    {
+      "question": "Which body oversees federal elections in the United States?",
+      "options": [
+        "The Supreme Court",
+        "The Federal Election Commission (FEC)",
+        "The Department of Justice",
+        "The Senate"
+      ],
+      "correct": 1,
+      "explanation": "The FEC is the independent agency that enforces campaign finance law and oversees federal elections."
+    },
+    {
+      "question": "What is voter registration?",
+      "options": [
+        "Paying a fee to vote",
+        "Signing up on an official list of eligible voters",
+        "Choosing a political party",
+        "Receiving a ballot in the mail"
+      ],
+      "correct": 1,
+      "explanation": "Voter registration is the process of adding your name to the official list of eligible voters before an election."
+    },
+    {
+      "question": "What is a caucus?",
+      "options": [
+        "A type of ballot",
+        "A local meeting where voters publicly choose a candidate",
+        "A court ruling on election law",
+        "A campaign advertisement"
+      ],
+      "correct": 1,
+      "explanation": "A caucus is a local gathering where registered members of a party vote for their preferred candidate through discussion and public declaration."
+    }
+  ],
+  "campaign": [
+    {
+      "question": "What is the purpose of a political debate during a campaign?",
+      "options": [
+        "To count votes early",
+        "To allow candidates to present and defend their positions",
+        "To certify election results",
+        "To register new voters"
+      ],
+      "correct": 1,
+      "explanation": "Debates give candidates a platform to explain their policies and challenge opponents in front of voters."
+    },
+    {
+      "question": "What is a campaign manifesto?",
+      "options": [
+        "A legal challenge to election results",
+        "A formal document outlining a party's policies and promises",
+        "A list of registered voters",
+        "A court order to hold an election"
+      ],
+      "correct": 1,
+      "explanation": "A manifesto is a published declaration of a party's intentions, policies, and vision if elected."
+    },
+    {
+      "question": "What does campaign finance regulation aim to prevent?",
+      "options": [
+        "Voter turnout",
+        "Undue influence of money on elections",
+        "Candidates from debating",
+        "Media coverage of elections"
+      ],
+      "correct": 1,
+      "explanation": "Campaign finance laws limit donations and spending to prevent wealthy individuals or groups from having disproportionate influence."
+    },
+    {
+      "question": "What is a swing state in US elections?",
+      "options": [
+        "A state that always votes for one party",
+        "A state where either major party could win",
+        "A state with no electoral votes",
+        "A state that holds its primary last"
+      ],
+      "correct": 1,
+      "explanation": "Swing states (or battleground states) are competitive states where neither party has a guaranteed majority, making them crucial in presidential elections."
+    },
+    {
+      "question": "What is grassroots organizing in a campaign?",
+      "options": [
+        "Hiring professional lobbyists",
+        "Building support from ordinary citizens at the local level",
+        "Buying television advertisements",
+        "Fundraising from corporations"
+      ],
+      "correct": 1,
+      "explanation": "Grassroots organizing involves mobilizing volunteers and community members to build support from the ground up."
+    }
+  ],
+  "voting-day": [
+    {
+      "question": "What is an absentee ballot?",
+      "options": [
+        "A ballot cast after the deadline",
+        "A ballot submitted without voting in person",
+        "A blank ballot",
+        "A ballot used only in primaries"
+      ],
+      "correct": 1,
+      "explanation": "An absentee ballot allows eligible voters to vote without going to a polling station, typically by mail."
+    },
+    {
+      "question": "What is the purpose of exit polls?",
+      "options": [
+        "To count official votes",
+        "To survey voters as they leave polling stations to predict results",
+        "To verify voter ID",
+        "To register last-minute voters"
+      ],
+      "correct": 1,
+      "explanation": "Exit polls are surveys conducted outside polling stations to gauge how people voted and project election outcomes."
+    },
+    {
+      "question": "What is early voting?",
+      "options": [
+        "Voting before you turn 18",
+        "Casting a ballot before the official election day during a designated period",
+        "Voting in a primary election",
+        "Voting by proxy"
+      ],
+      "correct": 1,
+      "explanation": "Early voting allows eligible voters to cast ballots before election day at designated locations."
+    },
+    {
+      "question": "What is a polling station?",
+      "options": [
+        "A TV studio for election coverage",
+        "A designated location where voters cast their ballots",
+        "A place where votes are counted",
+        "A campaign headquarters"
+      ],
+      "correct": 1,
+      "explanation": "A polling station (or polling place) is the official location where voters go to cast their ballots on election day."
+    },
+    {
+      "question": "Why might a provisional ballot be issued?",
+      "options": [
+        "When a voter wants to vote twice",
+        "When a voter's eligibility cannot be immediately confirmed at the polling station",
+        "When a voter arrives after polls close",
+        "When a voter forgets their candidate preference"
+      ],
+      "correct": 1,
+      "explanation": "Provisional ballots are given when there is a question about a voter's eligibility; they are set aside and verified after election day."
+    }
+  ],
+  "counting": [
+    {
+      "question": "What is a recount?",
+      "options": [
+        "A second election",
+        "A re-tallying of votes, usually when the margin is very close",
+        "A legal challenge to a candidate",
+        "A new voter registration drive"
+      ],
+      "correct": 1,
+      "explanation": "A recount is a repeat tabulation of votes cast in an election, typically triggered when the margin of victory is very small."
+    },
+    {
+      "question": "What does it mean to certify election results?",
+      "options": [
+        "To announce a winner on TV",
+        "For official authorities to formally confirm the accuracy of the vote count",
+        "To begin a new campaign",
+        "To swear in the winner"
+      ],
+      "correct": 1,
+      "explanation": "Certification is the official process by which election authorities verify and formally confirm the final vote tallies."
+    },
+    {
+      "question": "What is the Electoral College in the US?",
+      "options": [
+        "A university that trains election officials",
+        "A body of electors who formally elect the President and Vice President",
+        "A committee that counts popular votes",
+        "A group of campaign managers"
+      ],
+      "correct": 1,
+      "explanation": "The Electoral College is a body of 538 electors whose votes formally determine the US President, based on each state's popular vote outcome."
+    },
+    {
+      "question": "What are provisional ballots counted?",
+      "options": [
+        "Before any other ballots",
+        "After election day, once eligibility is verified",
+        "Only if the election is contested",
+        "Never — they are discarded"
+      ],
+      "correct": 1,
+      "explanation": "Provisional ballots are counted after election day once officials verify the voter's eligibility."
+    },
+    {
+      "question": "What is a canvass in the context of elections?",
+      "options": [
+        "Door-to-door campaigning",
+        "The official review and tabulation of all ballots cast",
+        "A type of campaign poster",
+        "A voter registration form"
+      ],
+      "correct": 1,
+      "explanation": "The canvass is the official process of reviewing, tabulating, and verifying all ballots to produce the official vote count."
+    }
+  ],
+  "certification": [
+    {
+      "question": "What happens during the Electoral College meeting in December?",
+      "options": [
+        "Candidates debate one final time",
+        "Electors cast their official votes for President and Vice President",
+        "Congress certifies the popular vote",
+        "The Supreme Court reviews the results"
+      ],
+      "correct": 1,
+      "explanation": "In December, electors from each state meet in their state capitals to cast their official electoral votes."
+    },
+    {
+      "question": "What is the role of Congress in certifying a US presidential election?",
+      "options": [
+        "Congress holds a new election if results are disputed",
+        "Congress counts and certifies the electoral votes in a joint session in January",
+        "Congress appoints the President directly",
+        "Congress has no role in certification"
+      ],
+      "correct": 1,
+      "explanation": "Congress meets in a joint session in early January to count and certify the electoral votes, formally confirming the election outcome."
+    },
+    {
+      "question": "What is a certificate of ascertainment?",
+      "options": [
+        "A voter ID document",
+        "A document signed by a state governor listing the state's electors and their votes",
+        "A campaign finance report",
+        "A court order to recount votes"
+      ],
+      "correct": 1,
+      "explanation": "A certificate of ascertainment is a document signed by the state governor that identifies the winning presidential candidate's electors."
+    },
+    {
+      "question": "What is inauguration?",
+      "options": [
+        "The announcement of election results",
+        "The formal ceremony in which the President-elect is sworn into office",
+        "The counting of electoral votes",
+        "The filing of candidacy papers"
+      ],
+      "correct": 1,
+      "explanation": "Inauguration is the formal ceremony marking the beginning of a new presidential term, during which the President takes the oath of office."
+    },
+    {
+      "question": "What is a peaceful transfer of power?",
+      "options": [
+        "A military handover of government",
+        "The orderly transition of government authority from one elected leader to another",
+        "A court-ordered change of leadership",
+        "A vote of no confidence"
+      ],
+      "correct": 1,
+      "explanation": "A peaceful transfer of power is a hallmark of democracy — the outgoing leader voluntarily cedes authority to the newly elected leader."
+    }
+  ],
+  "announcement": [
+    {
+      "question": "What is the Model Code of Conduct in Indian elections?",
+      "options": [
+        "A rulebook for voters",
+        "A set of guidelines that political parties and candidates must follow during the election period",
+        "A law passed by Parliament",
+        "A code for media coverage"
+      ],
+      "correct": 1,
+      "explanation": "The Model Code of Conduct is a set of guidelines issued by the Election Commission of India to ensure free and fair elections."
+    },
+    {
+      "question": "Who announces the election schedule in India?",
+      "options": [
+        "The Prime Minister",
+        "The Election Commission of India (ECI)",
+        "The President of India",
+        "The Supreme Court"
+      ],
+      "correct": 1,
+      "explanation": "The Election Commission of India is the constitutional body responsible for administering elections and announcing the election schedule."
+    },
+    {
+      "question": "When does the Model Code of Conduct come into effect?",
+      "options": [
+        "After voting day",
+        "Immediately upon announcement of the election schedule",
+        "One week before voting",
+        "After results are declared"
+      ],
+      "correct": 0,
+      "explanation": "The Model Code of Conduct comes into effect immediately when the ECI announces the election schedule."
+    },
+    {
+      "question": "What is the role of security forces during Indian elections?",
+      "options": [
+        "To campaign for candidates",
+        "To ensure free and fair voting by maintaining order at polling stations",
+        "To count votes",
+        "To register voters"
+      ],
+      "correct": 1,
+      "explanation": "Security forces are deployed across constituencies to maintain law and order and ensure voters can cast their ballots freely."
+    },
+    {
+      "question": "What is a constituency in the context of Indian elections?",
+      "options": [
+        "A political party",
+        "A geographical area that elects one representative to Parliament or a state legislature",
+        "A type of ballot",
+        "A campaign committee"
+      ],
+      "correct": 1,
+      "explanation": "A constituency is a defined geographic area whose registered voters elect a representative to the Lok Sabha or state assembly."
+    }
+  ],
+  "nomination": [
+    {
+      "question": "Who scrutinizes nomination papers in Indian elections?",
+      "options": [
+        "The Prime Minister",
+        "The Returning Officer",
+        "The Election Commission headquarters",
+        "The Supreme Court"
+      ],
+      "correct": 1,
+      "explanation": "The Returning Officer for each constituency scrutinizes nomination papers to ensure candidates meet all legal requirements."
+    },
+    {
+      "question": "What is the withdrawal deadline in Indian elections?",
+      "options": [
+        "The day before voting",
+        "A set number of days after the last date of nomination",
+        "The day nominations open",
+        "The day results are declared"
+      ],
+      "correct": 1,
+      "explanation": "Candidates have a specific window after the nomination scrutiny period to withdraw their candidacy before the final list is published."
+    },
+    {
+      "question": "What is an affidavit in the context of Indian election nominations?",
+      "options": [
+        "A campaign poster",
+        "A sworn statement by a candidate declaring their assets, liabilities, and criminal record",
+        "A voter registration form",
+        "A party membership card"
+      ],
+      "correct": 1,
+      "explanation": "Candidates must file an affidavit with their nomination disclosing their criminal record, assets, and educational qualifications."
+    },
+    {
+      "question": "What is the significance of the final list of candidates?",
+      "options": [
+        "It determines the election date",
+        "It is the official list of all valid candidates who will appear on the ballot",
+        "It lists all registered voters",
+        "It shows campaign spending"
+      ],
+      "correct": 1,
+      "explanation": "The final list of candidates, published after the withdrawal deadline, determines who will appear on the ballot for voters to choose from."
+    },
+    {
+      "question": "What is a symbol in Indian elections?",
+      "options": [
+        "A party flag",
+        "A unique icon assigned to each candidate or party for identification on the ballot",
+        "A voter ID card",
+        "A campaign slogan"
+      ],
+      "correct": 1,
+      "explanation": "Election symbols are unique icons assigned to parties and independent candidates, helping voters — including those who cannot read — identify their choice on the ballot."
+    }
+  ],
+  "voting-india": [
+    {
+      "question": "What is an EVM in Indian elections?",
+      "options": [
+        "Electronic Voter Management",
+        "Electronic Voting Machine used to cast and record votes",
+        "Emergency Voting Method",
+        "Election Verification Module"
+      ],
+      "correct": 1,
+      "explanation": "An Electronic Voting Machine (EVM) is a tamper-resistant device used in Indian elections to record votes electronically."
+    },
+    {
+      "question": "What is VVPAT?",
+      "options": [
+        "Voter Verified Paper Audit Trail — a paper slip confirming the vote cast on an EVM",
+        "Verified Voter Personal Attendance Token",
+        "Virtual Voting Platform and Technology",
+        "Vote Validation and Processing Algorithm Tool"
+      ],
+      "correct": 0,
+      "explanation": "VVPAT is a paper slip printed by the EVM showing the candidate voted for, allowing voters to verify their vote was recorded correctly."
+    },
+    {
+      "question": "Why is ink applied to a voter's finger in India?",
+      "options": [
+        "As a reward for voting",
+        "To prevent a person from voting more than once",
+        "To identify party supporters",
+        "To mark voters for security purposes"
+      ],
+      "correct": 1,
+      "explanation": "Indelible ink is applied to the index finger of voters to prevent double voting, as it cannot be easily washed off."
+    },
+    {
+      "question": "Why does India conduct elections in multiple phases?",
+      "options": [
+        "Because there are multiple political parties",
+        "To allow security forces to be redeployed across different regions sequentially",
+        "Because EVMs are limited in number",
+        "Because different states have different election laws"
+      ],
+      "correct": 1,
+      "explanation": "Multi-phase polling allows the same security forces and election officials to be deployed across India's vast geography in a manageable sequence."
+    },
+    {
+      "question": "What is the minimum voting age in India?",
+      "options": [
+        "16",
+        "18",
+        "21",
+        "25"
+      ],
+      "correct": 1,
+      "explanation": "The minimum voting age in India is 18 years, as established by the 61st Constitutional Amendment in 1988."
+    }
+  ],
+  "results-india": [
+    {
+      "question": "What system does India use to elect members of the Lok Sabha?",
+      "options": [
+        "Proportional representation",
+        "First Past the Post (FPTP)",
+        "Preferential voting",
+        "Two-round system"
+      ],
+      "correct": 1,
+      "explanation": "India uses the First Past the Post system, where the candidate with the most votes in a constituency wins, regardless of whether they have a majority."
+    },
+    {
+      "question": "Who declares the winner in an Indian constituency?",
+      "options": [
+        "The Election Commission of India",
+        "The Returning Officer",
+        "The Prime Minister",
+        "The President"
+      ],
+      "correct": 1,
+      "explanation": "The Returning Officer for each constituency officially declares the winner after counting is complete."
+    },
+    {
+      "question": "What are postal ballots in India?",
+      "options": [
+        "Ballots sent to voters by post",
+        "Ballots cast by certain categories of voters (e.g., military, overseas) who cannot vote in person",
+        "Ballots that are counted last",
+        "Ballots used in by-elections"
+      ],
+      "correct": 1,
+      "explanation": "Postal ballots allow certain categories of voters — such as armed forces personnel and election officials on duty — to vote without attending a polling station."
+    },
+    {
+      "question": "How many seats must a party or alliance win to form a majority government in the Lok Sabha?",
+      "options": [
+        "200",
+        "272",
+        "300",
+        "350"
+      ],
+      "correct": 1,
+      "explanation": "The Lok Sabha has 543 elected seats. A simple majority requires 272 seats (more than half)."
+    },
+    {
+      "question": "What happens if no single party wins a majority in India?",
+      "options": [
+        "A new election is immediately held",
+        "Parties negotiate to form a coalition government",
+        "The President rules directly",
+        "The largest party automatically forms the government"
+      ],
+      "correct": 1,
+      "explanation": "If no party wins a majority, parties negotiate to form a coalition government, which must demonstrate majority support in the Lok Sabha."
+    }
+  ],
+  "dissolution": [
+    {
+      "question": "How is a UK general election formally triggered?",
+      "options": [
+        "By a public referendum",
+        "By Royal Proclamation dissolving Parliament",
+        "By a vote in the House of Lords",
+        "By the Prime Minister's personal announcement"
+      ],
+      "correct": 1,
+      "explanation": "A UK general election is formally triggered when the Monarch dissolves Parliament by Royal Proclamation on the advice of the Prime Minister."
+    },
+    {
+      "question": "What is a writ of election in the UK?",
+      "options": [
+        "A legal challenge to a candidate",
+        "A formal document issued to each constituency's Returning Officer to conduct an election",
+        "A voter registration form",
+        "A campaign spending report"
+      ],
+      "correct": 1,
+      "explanation": "Writs of election are formal documents issued to Returning Officers in each constituency, directing them to conduct the election."
+    },
+    {
+      "question": "How many constituencies are there in the UK House of Commons?",
+      "options": [
+        "500",
+        "600",
+        "650",
+        "700"
+      ],
+      "correct": 2,
+      "explanation": "The UK House of Commons has 650 constituencies, each electing one Member of Parliament (MP)."
+    },
+    {
+      "question": "What is the minimum notice period for a UK general election?",
+      "options": [
+        "10 working days",
+        "25 working days",
+        "6 weeks",
+        "3 months"
+      ],
+      "correct": 1,
+      "explanation": "UK law requires a minimum of 25 working days between the dissolution of Parliament and polling day."
+    },
+    {
+      "question": "What is the electoral register?",
+      "options": [
+        "A list of all candidates standing for election",
+        "The official list of people eligible to vote in a constituency",
+        "A record of past election results",
+        "A list of polling stations"
+      ],
+      "correct": 1,
+      "explanation": "The electoral register is the official list of people who are registered to vote in a particular constituency."
+    }
+  ],
+  "polling-uk": [
+    {
+      "question": "On which day of the week are UK general elections always held?",
+      "options": [
+        "Monday",
+        "Wednesday",
+        "Thursday",
+        "Saturday"
+      ],
+      "correct": 2,
+      "explanation": "By convention, UK general elections are always held on a Thursday."
+    },
+    {
+      "question": "What voting system does the UK use for general elections?",
+      "options": [
+        "Proportional representation",
+        "First Past the Post (FPTP)",
+        "Alternative vote",
+        "Single transferable vote"
+      ],
+      "correct": 1,
+      "explanation": "The UK uses First Past the Post, where the candidate with the most votes in each constituency wins the seat."
+    },
+    {
+      "question": "What hours are UK polling stations open?",
+      "options": [
+        "8am–8pm",
+        "7am–10pm",
+        "9am–5pm",
+        "6am–9pm"
+      ],
+      "correct": 1,
+      "explanation": "UK polling stations are open from 7am to 10pm on election day."
+    },
+    {
+      "question": "What must a UK voter do to cast their ballot?",
+      "options": [
+        "Show a passport",
+        "Present their poll card or photo ID",
+        "Pay a small fee",
+        "Register on the day"
+      ],
+      "correct": 1,
+      "explanation": "Since 2023, UK voters must show an accepted form of photo ID at polling stations to receive their ballot."
+    },
+    {
+      "question": "What is a spoiled ballot in the UK?",
+      "options": [
+        "A ballot cast for a losing candidate",
+        "A ballot that is marked incorrectly or deliberately defaced, making it invalid",
+        "A ballot cast by post",
+        "A ballot cast in the wrong constituency"
+      ],
+      "correct": 1,
+      "explanation": "A spoiled ballot is one that cannot be counted because it is marked incorrectly, is blank, or has been deliberately defaced."
+    }
+  ],
+  "voting-de": [
+    {
+      "question": "How many votes does each German voter cast on election day?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correct": 1,
+      "explanation": "German voters cast two votes: the Erststimme (first vote) for a direct constituency candidate, and the Zweitstimme (second vote) for a party list."
+    },
+    {
+      "question": "What does the Zweitstimme (second vote) determine in German elections?",
+      "options": [
+        "Which local candidate wins the constituency",
+        "The overall distribution of seats in the Bundestag",
+        "Who becomes Chancellor",
+        "Which party forms the government alone"
+      ],
+      "correct": 1,
+      "explanation": "The Zweitstimme (second vote) for a party list is the more important vote — it determines the proportional share of seats each party receives in the Bundestag."
+    },
+    {
+      "question": "What is the 5% threshold in German elections?",
+      "options": [
+        "Parties must spend at least 5% of their budget on advertising",
+        "Parties must receive at least 5% of the national vote to enter the Bundestag",
+        "Candidates must win 5% of their constituency vote",
+        "Coalitions must have at least 5 parties"
+      ],
+      "correct": 1,
+      "explanation": "To prevent extreme fragmentation, parties must win at least 5% of the national vote (or 3 direct constituency seats) to be represented in the Bundestag."
+    },
+    {
+      "question": "On which day of the week are German federal elections held?",
+      "options": [
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Monday"
+      ],
+      "correct": 2,
+      "explanation": "German federal elections are always held on a Sunday to maximize voter participation."
+    },
+    {
+      "question": "What is the Erststimme (first vote) used for?",
+      "options": [
+        "Choosing a party",
+        "Directly electing a local constituency representative",
+        "Selecting the Chancellor",
+        "Voting on a referendum"
+      ],
+      "correct": 1,
+      "explanation": "The Erststimme is used to directly elect a candidate to represent the local constituency in the Bundestag."
+    }
+  ],
+  "voting-au": [
+    {
+      "question": "Is voting compulsory in Australia?",
+      "options": [
+        "No, it is voluntary",
+        "Yes, all enrolled citizens must vote or face a fine",
+        "Only for citizens over 25",
+        "Only in federal elections"
+      ],
+      "correct": 1,
+      "explanation": "Voting is compulsory in Australia for all enrolled citizens aged 18 and over. Failure to vote without a valid reason incurs a fine."
+    },
+    {
+      "question": "What voting system does Australia use for the House of Representatives?",
+      "options": [
+        "First Past the Post",
+        "Proportional representation",
+        "Preferential (instant-runoff) voting",
+        "Two-round system"
+      ],
+      "correct": 2,
+      "explanation": "Australia uses preferential voting, where voters number candidates in order of preference. If no candidate has a majority of first preferences, votes are redistributed until one does."
+    },
+    {
+      "question": "On which day of the week are Australian federal elections held?",
+      "options": [
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "correct": 2,
+      "explanation": "Australian federal elections are always held on a Saturday."
+    },
+    {
+      "question": "What is a how-to-vote card in Australia?",
+      "options": [
+        "An official government guide to the voting process",
+        "A card distributed by parties showing voters how to number their preferences",
+        "A voter registration form",
+        "A postal vote application"
+      ],
+      "correct": 1,
+      "explanation": "How-to-vote cards are distributed by political parties outside polling stations, showing voters the party's recommended order of preferences."
+    },
+    {
+      "question": "What is an informal vote in Australia?",
+      "options": [
+        "A vote cast before election day",
+        "A ballot that is incorrectly filled in and therefore not counted",
+        "A vote cast by a non-citizen",
+        "A vote cast at the wrong polling station"
+      ],
+      "correct": 1,
+      "explanation": "An informal vote is a ballot that is not filled in correctly (e.g., not numbering all candidates) and therefore cannot be counted."
     }
   ]
 }

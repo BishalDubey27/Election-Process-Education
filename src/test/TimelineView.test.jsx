@@ -17,7 +17,7 @@ describe('TimelineView', () => {
   it('calls onPhaseSelect when a phase is clicked', () => {
     const onPhaseSelect = vi.fn();
     render(<TimelineView phases={mockPhases} currentPhaseIndex={0} completedPhases={[]} onPhaseSelect={onPhaseSelect} />);
-    fireEvent.click(screen.getByText('Phase 1'));
+    fireEvent.click(screen.getByLabelText(/Phase 1/));
     expect(onPhaseSelect).toHaveBeenCalledWith(0);
   });
 });
