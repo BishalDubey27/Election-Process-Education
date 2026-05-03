@@ -27,6 +27,10 @@ const ChatPanel = ({ isOpen, onClose, country, phase, userLevel, history, onUpda
     setIsLoading(true);
 
     try {
+      if (!import.meta.env.VITE_GEMINI_API_KEY || import.meta.env.VITE_GEMINI_API_KEY.includes('YOUR_GEMINI_API_KEY')) {
+        throw new Error("API_KEY_MISSING");
+      }
+
       const response = await askGemini({
         history,
         country: country.label,
@@ -37,7 +41,11 @@ const ChatPanel = ({ isOpen, onClose, country, phase, userLevel, history, onUpda
 
       onUpdateHistory([...newHistory, { role: "model", parts: [{ text: response }] }]);
     } catch (error) {
-      onUpdateHistory([...newHistory, { role: "model", parts: [{ text: "I'm sorry, I encountered an error. Please try again." }] }]);
+      let errorMsg = "I'm sorry, I encountered an error. Please try again.";
+      if (error.message === "API_KEY_MISSING") {
+        errorMsg = "Assistant is offline: Please add your Google Gemini API key to the .env file to enable chat.";
+      }
+      onUpdateHistory([...newHistory, { role: "model", parts: [{ text: errorMsg }] }]);
     } finally {
       setIsLoading(false);
     }
