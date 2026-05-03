@@ -1,5 +1,5 @@
 {
-  "name": "temp-app",
+  "name": "election-education",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,30 +11,32 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@google/genai": "^1.51.0",
-    "firebase": "^12.12.1",
-    "lucide-react": "^1.14.0",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "react-router-dom": "^7.14.2"
+    "@google/genai": "^1.0.0",
+    "@google/generative-ai": "^0.21.0",
+    "firebase": "^11.3.1",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@tailwindcss/vite": "^4.2.4",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "autoprefixer": "^10.5.0",
-    "eslint": "^10.2.1",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.5.0",
-    "jsdom": "^29.1.1",
-    "postcss": "^8.5.13",
-    "tailwindcss": "^4.2.4",
-    "vite": "^8.0.10",
-    "vitest": "^4.1.5"
+    "@eslint/js": "^9.19.0",
+    "@tailwindcss/vite": "^4.0.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
+    "jsdom": "^26.0.0",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
   }
 }

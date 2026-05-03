@@ -1,7 +1,0 @@
-[
-  { "id": "USA", "label": "🇺🇸 United States", "system": "Electoral College", "flag": "🇺🇸" },
-  { "id": "India", "label": "🇮🇳 India", "system": "First Past The Post", "flag": "🇮🇳" },
-  { "id": "UK", "label": "🇬🇧 United Kingdom", "system": "Westminster FPTP", "flag": "🇬🇧" },
-  { "id": "Germany", "label": "🇩🇪 Germany", "system": "Mixed-Member PR", "flag": "🇩🇪" },
-  { "id": "Australia", "label": "🇦🇺 Australia", "system": "Preferential Voting", "flag": "🇦🇺" }
-]
