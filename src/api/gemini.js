@@ -2,15 +2,14 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || "");
 
-// Simple client-side rate limiter: max 5 requests per 60 seconds
+// Simple client-side rate limiter: max 8 requests per 60 seconds
 const rateLimiter = (() => {
   const timestamps = [];
-  const MAX_REQUESTS = 5;
+  const MAX_REQUESTS = 8;
   const WINDOW_MS = 60_000;
   return {
     check() {
       const now = Date.now();
-      // Remove timestamps outside the window
       while (timestamps.length && now - timestamps[0] > WINDOW_MS) timestamps.shift();
       if (timestamps.length >= MAX_REQUESTS) {
         const waitSec = Math.ceil((WINDOW_MS - (now - timestamps[0])) / 1000);
@@ -21,11 +20,6 @@ const rateLimiter = (() => {
   };
 })();
 
-/**
- * Validate and sanitize user input before sending to the API.
- * @param {string} input
- * @returns {string} sanitized input
- */
 function sanitizeInput(input) {
   if (typeof input !== "string") throw new Error("INVALID_INPUT");
   const trimmed = input.trim();
@@ -34,11 +28,6 @@ function sanitizeInput(input) {
   return trimmed;
 }
 
-/**
- * Validate that a quiz array has the expected shape.
- * @param {unknown} data
- * @returns {boolean}
- */
 function isValidQuizArray(data) {
   if (!Array.isArray(data) || data.length === 0) return false;
   return data.every(
@@ -54,19 +43,20 @@ function isValidQuizArray(data) {
 }
 
 /**
- * Send a chat message to Gemini and return the text response.
+ * Send a chat message to Gemini 2.0 Flash and return the text response.
  */
 export async function askGemini({ message, history = [], country, phase, userLevel }) {
   const safeMessage = sanitizeInput(message);
   rateLimiter.check();
 
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.0-flash",
     systemInstruction: `You are an expert election education assistant.
 Your goal is to explain the ${phase} of the election process in ${country} to a ${userLevel} level audience.
 Maintain strict neutrality. Do not favor any political party or candidate.
 Focus on procedural, historical, and factual information.
-If asked for an opinion, politely decline and steer the conversation back to how the system works.`,
+If asked for an opinion, politely decline and steer the conversation back to how the system works.
+Keep responses concise and clear — aim for 2-4 paragraphs maximum.`,
   });
 
   const chat = model.startChat({
@@ -79,7 +69,36 @@ If asked for an opinion, politely decline and steer the conversation back to how
 }
 
 /**
- * Generate quiz questions via Gemini with schema validation and fallback.
+ * Generate an AI-powered deep-dive summary for a phase using Gemini 2.0 Flash.
+ * @param {string} country
+ * @param {string} phase
+ * @param {string} userLevel
+ * @returns {Promise<string>}
+ */
+export async function generatePhaseSummary(country, phase, userLevel) {
+  rateLimiter.check();
+
+  const model = genAI.getGenerativeModel({
+    model: "gemini-2.0-flash",
+    systemInstruction:
+      "You are a neutral, expert civic education writer. Provide factual, unbiased information about election processes.",
+  });
+
+  const prompt = `Write a concise, engaging educational summary (3-4 paragraphs) about the "${phase}" phase of the election process in ${country}, tailored for a ${userLevel} audience.
+Include:
+- What happens during this phase and why it matters
+- Key actors involved (officials, parties, voters)
+- One interesting or unique fact about how ${country} handles this phase
+- Any common misconceptions to address
+
+Keep the tone informative, neutral, and accessible. No markdown headers — just flowing paragraphs.`;
+
+  const result = await model.generateContent(prompt);
+  return result.response.text();
+}
+
+/**
+ * Generate quiz questions via Gemini 2.0 Flash with schema validation.
  * @param {string} topic
  * @param {number} count
  * @returns {Promise<Array|null>}
@@ -95,7 +114,7 @@ Keep the tone educational and neutral.`;
 
   try {
     rateLimiter.check();
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const result = await model.generateContent(prompt);
     const text = result.response.text();
     const jsonStr = text.replace(/```json|```/g, "").trim();
@@ -110,4 +129,19 @@ Keep the tone educational and neutral.`;
     console.error("Quiz Generation Error:", error);
     return null;
   }
+}
+
+/**
+ * Translate text using Gemini 2.0 Flash (no separate API key needed).
+ * @param {string} text
+ * @param {string} targetLanguage  e.g. "Spanish", "French", "Hindi"
+ * @returns {Promise<string>}
+ */
+export async function translateText(text, targetLanguage) {
+  rateLimiter.check();
+
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const prompt = `Translate the following text to ${targetLanguage}. Return ONLY the translated text, no explanations or notes.\n\n${text}`;
+  const result = await model.generateContent(prompt);
+  return result.response.text().trim();
 }
