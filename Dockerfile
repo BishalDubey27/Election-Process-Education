@@ -1,19 +1,21 @@
-# Stage 1: Build the React app
+# Stage 1: Build the React/Vite app
 FROM node:20-alpine AS build
 WORKDIR /app
+
+# Accept the API key at build time so Vite can inline it
 ARG VITE_GEMINI_API_KEY
 ENV VITE_GEMINI_API_KEY=$VITE_GEMINI_API_KEY
+
 COPY package*.json ./
-RUN npm install
+RUN npm ci --prefer-offline
+
 COPY . .
-# We don't include .env in the build for security; 
-# API keys should ideally be passed as environment variables or handled via backend.
-# But for a simple static build, we'll build it.
 RUN npm run build
 
-# Stage 2: Serve the app with Nginx
+# Stage 2: Serve with Nginx on port 8080 (required by Cloud Run)
 FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]

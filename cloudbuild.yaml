@@ -1,0 +1,21 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - build
+      - '--build-arg'
+      - 'VITE_GEMINI_API_KEY=${_VITE_GEMINI_API_KEY}'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/civicguide:latest'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/civicguide:latest']
+
+images:
+  - 'gcr.io/$PROJECT_ID/civicguide:latest'
+
+substitutions:
+  _VITE_GEMINI_API_KEY: ''
+
+options:
+  logging: CLOUD_LOGGING_ONLY
