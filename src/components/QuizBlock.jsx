@@ -8,6 +8,21 @@ const QuizBlock = ({ questions, onComplete, onReview }) => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
+  // Guard: empty or missing questions
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="p-8 text-center space-y-4">
+        <p className="text-muted-foreground text-sm">No quiz questions available for this phase.</p>
+        <button
+          onClick={onReview}
+          className="px-6 py-2.5 rounded-xl border border-border hover:bg-muted transition-colors text-sm font-medium"
+        >
+          Back to Phase
+        </button>
+      </div>
+    );
+  }
+
   const currentQuestion = questions[currentIdx];
 
   const handleOptionSelect = (idx) => {

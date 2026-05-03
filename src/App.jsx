@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import CountrySelector from './components/CountrySelector';
 import TimelineView from './components/TimelineView';
 import PhaseCard from './components/PhaseCard';
@@ -46,11 +46,13 @@ function App() {
   });
 
   const [cloudSyncStatus, setCloudSyncStatus] = useState('idle'); // 'idle' | 'saving' | 'saved' | 'error'
+  // Track whether the user has made an active selection since mount
+  const userHasInteracted = useRef(false);
 
-  // On mount: try to load from Firestore (cloud takes priority over local)
+  // On mount: try to load from Firestore — only if user hasn't interacted yet
   useEffect(() => {
     loadProgressFromCloud().then((cloudData) => {
-      if (cloudData) {
+      if (cloudData && !userHasInteracted.current) {
         setState(prev => ({
           ...DEFAULT_STATE,
           ...cloudData,
@@ -59,7 +61,7 @@ function App() {
         }));
       }
     });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Persist locally on every state change
   useEffect(() => {
@@ -93,6 +95,7 @@ function App() {
   const currentPhase = currentPhases[state.currentPhaseIndex];
 
   const handleCountrySelect = useCallback((country) => {
+    userHasInteracted.current = true;
     setState(prev => ({
       ...prev, country,
       currentPhaseIndex: 0,
@@ -112,20 +115,26 @@ function App() {
   }, []);
 
   const handleTakeQuiz = useCallback(() => {
-    setState(prev => ({ ...prev, isQuizActive: true }));
-    trackEvent('quiz_started', { phase_id: currentPhase?.id });
-  }, [currentPhase]);
+    setState(prev => {
+      const phase = (prev.country ? phasesData[prev.country.id] || [] : [])[prev.currentPhaseIndex];
+      trackEvent('quiz_started', { phase_id: phase?.id });
+      return { ...prev, isQuizActive: true };
+    });
+  }, []);
 
   const handleQuizComplete = useCallback((score) => {
-    const phase = currentPhases[state.currentPhaseIndex];
-    setState(prev => ({
-      ...prev,
-      isQuizActive: false,
-      completedPhases: [...new Set([...prev.completedPhases, phase.id])],
-      quizScores: { ...prev.quizScores, [phase.id]: score },
-    }));
-    trackEvent('quiz_completed', { phase_id: phase?.id, score });
-  }, [currentPhases, state.currentPhaseIndex]);
+    setState(prev => {
+      const phase = (prev.country ? phasesData[prev.country.id] || [] : [])[prev.currentPhaseIndex];
+      if (!phase) return { ...prev, isQuizActive: false };
+      trackEvent('quiz_completed', { phase_id: phase.id, score });
+      return {
+        ...prev,
+        isQuizActive: false,
+        completedPhases: [...new Set([...prev.completedPhases, phase.id])],
+        quizScores: { ...prev.quizScores, [phase.id]: score },
+      };
+    });
+  }, []);
 
   const progressPct = useMemo(
     () => currentPhases.length

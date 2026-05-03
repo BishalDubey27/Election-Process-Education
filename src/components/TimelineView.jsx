@@ -7,7 +7,7 @@ const TimelineView = memo(({ phases, currentPhaseIndex, completedPhases, onPhase
       <div className="absolute top-1/2 left-0 w-full h-1 bg-slate-200 -translate-y-1/2 rounded-full overflow-hidden" aria-hidden="true">
         <div
           className="h-full bg-primary-500 transition-all duration-1000 ease-out"
-          style={{ width: `${(currentPhaseIndex / Math.max(phases.length - 1, 1)) * 100}%` }}
+          style={{ width: `${phases.length > 1 ? (completedPhases.length / (phases.length - 1)) * 100 : 0}%` }}
         />
       </div>
 

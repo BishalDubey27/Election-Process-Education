@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import {
   MessageSquare, ClipboardCheck, Info, Clock,
   CheckCircle2, Sparkles, Languages, Volume2, Loader2, X
@@ -22,8 +22,44 @@ const PhaseCard = ({ phase, country, userLevel = 'beginner', onAskAI, onTakeQuiz
   const [isTranslating, setIsTranslating] = useState(false);
   const [activeLang, setActiveLang] = useState('');
   const [showLangMenu, setShowLangMenu] = useState(false);
+  const langMenuRef = useRef(null);
 
   const [isSpeaking, setIsSpeaking] = useState(false);
+
+  // Reset all AI state when the phase changes
+  useEffect(() => {
+    setAiSummary('');
+    setSummaryError('');
+    setTranslatedText('');
+    setActiveLang('');
+    setShowLangMenu(false);
+    // Cancel any ongoing speech
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    setIsSpeaking(false);
+  }, [phase.id]);
+
+  // Cancel speech on unmount
+  useEffect(() => {
+    return () => {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  // Close language menu on outside click
+  useEffect(() => {
+    if (!showLangMenu) return;
+    const handleOutsideClick = (e) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(e.target)) {
+        setShowLangMenu(false);
+      }
+    };
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => document.removeEventListener('mousedown', handleOutsideClick);
+  }, [showLangMenu]);
 
   // --- AI Summary ---
   const handleAISummary = useCallback(async () => {
@@ -205,7 +241,7 @@ const PhaseCard = ({ phase, country, userLevel = 'beginner', onAskAI, onTakeQuiz
           </button>
 
           {/* Translate */}
-          <div className="relative flex-1 min-w-[160px]">
+          <div className="relative flex-1 min-w-[160px]" ref={langMenuRef}>
             <button
               onClick={() => setShowLangMenu(v => !v)}
               aria-haspopup="listbox"

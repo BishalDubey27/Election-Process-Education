@@ -9,6 +9,7 @@ const CountrySelector = ({ onSelect }) => {
         <button
           key={country.id}
           onClick={() => onSelect(country)}
+          aria-label={`Explore ${country.label} election process`}
           className="group relative overflow-hidden rounded-3xl p-1 bg-gradient-to-br from-white/50 to-white/10 border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 text-left"
         >
           <div className="relative z-10 bg-white/40 backdrop-blur-xl rounded-[22px] p-6 h-full flex flex-col justify-between">

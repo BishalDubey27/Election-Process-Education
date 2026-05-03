@@ -21,6 +21,7 @@ const ChatPanel = ({ isOpen, onClose, country, phase, userLevel, history, onUpda
     e.preventDefault();
     const userMessage = input.trim();
     if (!userMessage || isLoading) return;
+    if (!country || !phase) return; // guard against undefined props
 
     // Client-side input validation
     if (userMessage.length > MAX_INPUT_LENGTH) {
